@@ -1,23 +1,21 @@
 %%
 %% This is file `beamerouterthememetropolis.sty',
-%% generated with the docstrip utility.
 %%
-%% The original source files were:
-%%
-%% beamerouterthememetropolis.dtx  (with options: `package')
+%% Copyright 2020 Institut Intelligence et Données - Université Laval
 %% ---------------------------------------------------------------------------
+%% This theme is based on the metropolis theme (https://github.com/matze/mtheme)
 %% Copyright 2015 Matthias Vogelgesang and the LaTeX community. A full list of
 %% contributors can be found at
 %% 
 %%     https://github.com/matze/mtheme/graphs/contributors
 %% 
 %% and the original template was based on the HSRM theme by Benjamin Weiss.
-%% 
+%% ---------------------------------------------------------------------------
 %% This work is licensed under a Creative Commons Attribution-ShareAlike 4.0
 %% International License (https://creativecommons.org/licenses/by-sa/4.0/).
 %% ---------------------------------------------------------------------------
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{beamerouterthememetropolis}[2017/01/23 Metropolis outer theme]
+\ProvidesPackage{beamerouterthemeiid}[2020/03/26 v0.1 IID outer theme]
 \RequirePackage{etoolbox}
 \RequirePackage{calc}
 \RequirePackage{pgfopts}
@@ -66,7 +64,13 @@
 \defbeamertemplate{frame numbering}{fraction}{
   \insertframenumber/\inserttotalframenumber
 }
-\defbeamertemplate{headline}{plain}{}
+\defbeamertemplate{headline}{plain}{%
+  \begin{beamercolorbox}{headline}%
+  	\vskip3pt%
+	\insertnavigation{\paperwidth}%
+	\vskip3pt%
+  \end{beamercolorbox}%
+}
 \defbeamertemplate{footline}{plain}{%
   \begin{beamercolorbox}[wd=\textwidth, sep=3ex]{footline}%
     \usebeamerfont{page number in head/foot}%
@@ -134,4 +138,4 @@
 \ProcessPgfPackageOptions{/metropolis/outer}
 \endinput
 %%
-%% End of file `beamerouterthememetropolis.sty'.
+%% End of file `beamerouterthemeiid.sty'.
