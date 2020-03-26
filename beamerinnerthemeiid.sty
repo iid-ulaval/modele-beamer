@@ -1,23 +1,21 @@
 %%
-%% This is file `beamerinnerthememetropolis.sty',
-%% generated with the docstrip utility.
+%% This is file `beamerinnerthemeiid.sty',
 %%
-%% The original source files were:
-%%
-%% beamerinnerthememetropolis.dtx  (with options: `package')
+%% Copyright 2020 Institut Intelligence et Données - Université Laval
 %% ---------------------------------------------------------------------------
+%% This theme is based on the metropolis theme (https://github.com/matze/mtheme)
 %% Copyright 2015 Matthias Vogelgesang and the LaTeX community. A full list of
 %% contributors can be found at
 %% 
 %%     https://github.com/matze/mtheme/graphs/contributors
 %% 
 %% and the original template was based on the HSRM theme by Benjamin Weiss.
-%% 
+%% ---------------------------------------------------------------------------
 %% This work is licensed under a Creative Commons Attribution-ShareAlike 4.0
 %% International License (https://creativecommons.org/licenses/by-sa/4.0/).
 %% ---------------------------------------------------------------------------
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{beamerinnerthememetropolis}[2017/01/23 Metropolis inner theme]
+\ProvidesPackage{beamerinnerthemeiid}[2020/03/26 IID inner theme]
 \RequirePackage{etoolbox}
 \RequirePackage{keyval}
 \RequirePackage{calc}
@@ -49,6 +47,7 @@
 }
 \setbeamertemplate{title page}{
   \begin{minipage}[b][\paperheight]{\textwidth}
+	\usebeamertemplate*{title iid logo}
     \ifx\inserttitlegraphic\@empty\else\usebeamertemplate*{title graphic}\fi
     \vfill%
     \ifx\inserttitle\@empty\else\usebeamertemplate*{title}\fi
@@ -70,6 +69,14 @@
 }
 \def\titlepage{%
   \usebeamertemplate{title page}
+}
+\setbeamertemplate{title iid logo}{
+	\vbox to 0pt {
+		\vspace*{2em}
+		\hfill
+		\includegraphics[height=.2\textheight]{iid-noir.pdf}%
+	}%
+	\nointerlineskip%
 }
 \setbeamertemplate{title graphic}{
   \vbox to 0pt {
@@ -294,4 +301,4 @@
 \ProcessPgfPackageOptions{/metropolis/inner}
 \endinput
 %%
-%% End of file `beamerinnerthememetropolis.sty'.
+%% End of file `beamerinnerthemeiid.sty'.
