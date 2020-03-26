@@ -1,23 +1,21 @@
 %%
 %% This is file `beamercolorthememetropolis.sty',
-%% generated with the docstrip utility.
 %%
-%% The original source files were:
-%%
-%% beamercolorthememetropolis.dtx  (with options: `package')
+%% Copyright 2020 Institut Intelligence et Données - Université Laval
 %% ---------------------------------------------------------------------------
+%% This theme is based on the metropolis theme (https://github.com/matze/mtheme)
 %% Copyright 2015 Matthias Vogelgesang and the LaTeX community. A full list of
 %% contributors can be found at
 %% 
 %%     https://github.com/matze/mtheme/graphs/contributors
 %% 
 %% and the original template was based on the HSRM theme by Benjamin Weiss.
-%% 
+%% ---------------------------------------------------------------------------
 %% This work is licensed under a Creative Commons Attribution-ShareAlike 4.0
 %% International License (https://creativecommons.org/licenses/by-sa/4.0/).
 %% ---------------------------------------------------------------------------
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{beamercolorthememetropolis}[2017/01/23 Metropolis color theme]
+\ProvidesPackage{beamercolorthemeiid}[2020/03/26 IID color theme]
 \RequirePackage{pgfopts}
 \pgfkeys{
   /metropolis/color/block/.cd,
@@ -37,28 +35,34 @@
     block=transparent,
   }
 }
-\definecolor{mDarkBrown}{HTML}{604c38}
-\definecolor{mDarkTeal}{HTML}{23373b}
-\definecolor{mLightBrown}{HTML}{EB811B}
-\definecolor{mLightGreen}{HTML}{14B03D}
+%% Couleurs principales
+\definecolor{iidRougeVif}{HTML}{FF0000}
+\definecolor{iidBleuNuit}{HTML}{181949}
+\definecolor{iidGrisClair}{HTML}{EAEAEA}
+%% Couleurs secondaires
+\definecolor{iidRoseFlamand}{HTML}{F283AC}
+\definecolor{iidOrange}{HTML}{F47A4B}
+\definecolor{iidViolet}{HTML}{825FA8}
+\definecolor{iidRosePrintemps}{HTML}{F4C2CB}
+\definecolor{iidVertMenthe}{HTML}{52BF9E}
 \newcommand{\metropolis@colors@dark}{
   \setbeamercolor{normal text}{%
     fg=black!2,
-    bg=mDarkTeal
+    bg=iidBleuNuit
   }
   \usebeamercolor[fg]{normal text}
 }
 \newcommand{\metropolis@colors@light}{
   \setbeamercolor{normal text}{%
-    fg=mDarkTeal,
+    fg=iidBleuNuit,
     bg=black!2
   }
 }
 \setbeamercolor{alerted text}{%
-  fg=mLightBrown
+  fg=iidOrange
 }
 \setbeamercolor{example text}{%
-  fg=mLightGreen
+  fg=iidVertMenthe
 }
 \setbeamercolor{titlelike}{use=normal text, parent=normal text}
 \setbeamercolor{author}{use=normal text, parent=normal text}
@@ -135,4 +139,4 @@
 \mode<all>
 \endinput
 %%
-%% End of file `beamercolorthememetropolis.sty'.
+%% End of file `beamercolorthemeiid.sty'.
