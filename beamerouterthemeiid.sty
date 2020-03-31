@@ -56,6 +56,15 @@
     progressbar=none,
   }
 }
+
+% Image de fond 
+\newcommand{\iidbackground}{%
+	\begin{tikzpicture}[remember picture,overlay]%
+		\node [xshift=0cm,yshift=0cm] at (current page.center)%
+		{\includegraphics[width=\paperwidth, height=\paperheight]{img/IID-PPT-vague-basUL}};%
+	\end{tikzpicture}%
+}
+
 \setbeamertemplate{navigation symbols}{}
 \defbeamertemplate{frame footer}{none}{}
 \defbeamertemplate{frame footer}{custom}[1]{ #1 }
@@ -64,21 +73,25 @@
 \defbeamertemplate{frame numbering}{fraction}{
   \insertframenumber/\inserttotalframenumber
 }
-\defbeamertemplate{headline}{plain}{%
-  \begin{beamercolorbox}{headline}%
-  	\vskip3pt%
-	\insertnavigation{\paperwidth}%
-	\vskip3pt%
-  \end{beamercolorbox}%
+%\defbeamertemplate{headline}{plain}{%
+%  \begin{beamercolorbox}{headline}%
+%  	\vskip3pt%
+%	\insertnavigation{\paperwidth}%
+%	\vskip3pt%
+%  \end{beamercolorbox}%
+%}
+\setbeamertemplate{footline}{%
+	\hfill%
+	\vspace{20pt}\includegraphics[height=0.5cm]{img/UL_P-BW}\hspace{20pt}
 }
-\defbeamertemplate{footline}{plain}{%
-  \begin{beamercolorbox}[wd=\textwidth, sep=3ex]{footline}%
-    \usebeamerfont{page number in head/foot}%
-    \usebeamertemplate*{frame footer}
-    \hfill%
-    \usebeamertemplate*{frame numbering}
-  \end{beamercolorbox}%
-}
+%\defbeamertemplate{footline}{plain}{%
+%  \begin{beamercolorbox}[wd=\textwidth, sep=3ex]{footline}%
+%    \usebeamerfont{page number in head/foot}%
+%    \usebeamertemplate*{frame footer}
+%    \hfill%
+%    \usebeamertemplate*{frame numbering}
+%  \end{beamercolorbox}%
+%}
 \newlength{\metropolis@frametitle@padding}
 \setlength{\metropolis@frametitle@padding}{2.2ex}
 \newcommand{\metropolis@frametitlestrut@start}{
@@ -91,24 +104,19 @@
 \newcommand{\metropolis@frametitlestrut@end}{
   \rule[-\metropolis@frametitle@padding]{0pt}{\metropolis@frametitle@padding}
 }
-\defbeamertemplate{frametitle}{plain}{%
-  \nointerlineskip%
-  \begin{beamercolorbox}[%
-      wd=\paperwidth,%
-      sep=0pt,%
-      leftskip=\metropolis@frametitle@padding,%
-      rightskip=\metropolis@frametitle@padding,%
-    ]{frametitle}%
-  \metropolis@frametitlestrut@start%
-  \insertframetitle%
-  \nolinebreak%
-  \metropolis@frametitlestrut@end%
-  \end{beamercolorbox}%
+\setbeamertemplate{frametitle}{%
+	\vspace{20pt}
+	\insertframetitle%
+	\vphantom{g}% To avoid fluctuations per frame
+	\par% <-- added
+	\rule[0.5\baselineskip]{0.7\paperwidth}{0.4pt}%
 }
 \setbeamertemplate{frametitle continuation}{%
   \usebeamerfont{frametitle}
   \romannumeral \insertcontinuationcount
 }
+
+
 \newlength{\metropolis@progressinheadfoot}
 \newlength{\metropolis@progressinheadfoot@linewidth}
 \setlength{\metropolis@progressinheadfoot@linewidth}{0.4pt}

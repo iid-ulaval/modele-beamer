@@ -1,12 +1,23 @@
-\documentclass{beamer}
+\documentclass[aspectratio=169]{beamer}
 \usetheme{iid}
 
 \title{Exemple de présentation avec le thème Beamer IID}
+\subtitle{Exemple de sous titre}
 \author{Équipe IID}
+\date{32 septembre 2020}
+
+\makeatletter
+\def\ps@navigation@titlepage{%
+	\iidbackground
+	\@nameuse{ps@navigation}}
+\addtobeamertemplate{title page}{\thispagestyle{navigation@titlepage}}{}
+\makeatother
+
 \begin{document}
 \begin{frame}[plain]
     \maketitle
 \end{frame}
+
 \section{Section 1}
 \subsection{Sous section 1.1}
 \begin{frame}{Titre d'une page}
@@ -17,10 +28,15 @@ Contenu de la première page
 Contenu d'une autre page
 \end{frame}
 \section{Section 2}
+
 \begin{frame}{Titre d'une deuxième page}
 \begin{itemize}
 	\item Un premier item
 	\item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec lectus mattis, vehicula sapien nec, condimentum turpis.
 \end{itemize}
+\end{frame}
+
+\begin{frame}[plain]
+	\makethanks
 \end{frame}
 \end{document}

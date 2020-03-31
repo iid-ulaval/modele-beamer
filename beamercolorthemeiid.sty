@@ -31,7 +31,7 @@
 }
 \newcommand{\metropolis@color@setdefaults}{
   \pgfkeys{/metropolis/color/.cd,
-    background=light,
+    background=dark,
     block=transparent,
   }
 }
@@ -45,17 +45,18 @@
 \definecolor{iidViolet}{HTML}{825FA8}
 \definecolor{iidRosePrintemps}{HTML}{F4C2CB}
 \definecolor{iidVertMenthe}{HTML}{52BF9E}
+
 \newcommand{\metropolis@colors@dark}{
   \setbeamercolor{normal text}{%
-    fg=black!2,
-    bg=iidBleuNuit
+    fg=black,
+    bg=white
   }
   \usebeamercolor[fg]{normal text}
 }
 \newcommand{\metropolis@colors@light}{
   \setbeamercolor{normal text}{%
-    fg=iidBleuNuit,
-    bg=black!2
+    fg=white,
+    bg=black
   }
 }
 \setbeamercolor{alerted text}{%
@@ -64,19 +65,25 @@
 \setbeamercolor{example text}{%
   fg=iidVertMenthe
 }
-\setbeamercolor{titlelike}{use=normal text, parent=normal text}
+\setbeamercolor{title text}{%
+	fg=iidRougeVif,
+	bg=white
+}
+\setbeamercolor{titlelike}{use=title text, parent=title text}
+\setbeamercolor{subtitle}{use=normal text, parent=normal text}
 \setbeamercolor{author}{use=normal text, parent=normal text}
 \setbeamercolor{date}{use=normal text, parent=normal text}
 \setbeamercolor{institute}{use=normal text, parent=normal text}
 \setbeamercolor{structure}{use=normal text, fg=normal text.fg}
+\setbeamercolor{itemize item}{use=normal text, parent=normal text}
 \setbeamercolor{palette primary}{%
   use=normal text,
-  fg=normal text.bg,
-  bg=normal text.fg
+  fg=normal text.fg,
+  bg=normal text.bg
 }
 \setbeamercolor{frametitle}{%
-  use=palette primary,
-  parent=palette primary
+  use=title text,
+  parent=title text
 }
 \setbeamercolor{headline}{%
   use=palette primary,

@@ -1,23 +1,21 @@
 %%
-%% This is file `beamerfontthememetropolis.sty',
-%% generated with the docstrip utility.
+%% This is file `beamerfontthemeiid.sty',
 %%
-%% The original source files were:
-%%
-%% beamerfontthememetropolis.dtx  (with options: `package')
+%% Copyright 2020 Institut Intelligence et Données - Université Laval
 %% ---------------------------------------------------------------------------
+%% This theme is based on the metropolis theme (https://github.com/matze/mtheme)
 %% Copyright 2015 Matthias Vogelgesang and the LaTeX community. A full list of
 %% contributors can be found at
 %% 
 %%     https://github.com/matze/mtheme/graphs/contributors
 %% 
 %% and the original template was based on the HSRM theme by Benjamin Weiss.
-%% 
+%% ---------------------------------------------------------------------------
 %% This work is licensed under a Creative Commons Attribution-ShareAlike 4.0
 %% International License (https://creativecommons.org/licenses/by-sa/4.0/).
 %% ---------------------------------------------------------------------------
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{beamerfontthememetropolis}[2017/01/23 Metropolis font theme]
+\ProvidesPackage{beamerfontthemeiid}[2020/03/26 v0.1 IID font theme]
 \RequirePackage{etoolbox}
 \RequirePackage{ifxetex}
 \RequirePackage{ifluatex}
@@ -93,8 +91,8 @@
     You need to compile with XeLaTeX or LuaLaTeX to use the Fira fonts%
   }
 }
-\setbeamerfont{title}{size=\Large,%
-                      series=\bfseries}
+\setbeamerfont{title}{size=\LARGE,%
+					  series=\bfseries}
 \setbeamerfont{author}{size=\small}
 \setbeamerfont{date}{size=\small}
 \setbeamerfont{section title}{size=\Large,%
@@ -103,7 +101,7 @@
                             series=\bfseries}
 \setbeamerfont{block title alerted}{size=\normalsize,%
                                     series=\bfseries}
-\setbeamerfont*{subtitle}{size=\large}
+\setbeamerfont*{subtitle}{size=\Large}
 \setbeamerfont{frametitle}{size=\large,%
                            series=\bfseries}
 \setbeamerfont{caption}{size=\small}
