@@ -21,6 +21,7 @@
 \RequirePackage{calc}
 \RequirePackage{pgfopts}
 \RequirePackage{tikz}
+\RequirePackage{hyperref}
 \pgfkeys{
   /metropolis/inner/sectionpage/.cd,
     .is choice,
@@ -68,19 +69,29 @@
 }
 
 % Page de remerciement
-\setbeamertemplate{thanks page}{
+\setbeamertemplate{thanks page}{%
 	\iidbackground
-	\begin{columns}%
-		\begin{column}{0.49\textwidth}%
+	\begin{columns}
+		\begin{column}{0.45\textwidth}%
+			\vskip -5em% JL - Why do i need vskip. \begin{columns}[T] not working ?
 			\includegraphics[height=.25\textheight]{img/iid-noir.pdf}%
-			
-			\vspace*{1em}%
+		\end{column}%
+		\begin{column}{0.54\textwidth}%
+			\vskip -5em
 			\textbf{POUR PLUS D’INFORMATIONS}%
 			
-			\vspace*{1em}%
-			equipe@iid.ulaval.ca%
-		\end{column}%
-		\begin{column}{0.39\textwidth}%
+			\vspace{1em}
+			equipe@iid.ulaval.ca
+			
+			\url{https://iid.ulaval.ca/}
+			
+			\includegraphics[height=.05\textheight]{img/f_logo_RGB-Hex-Blue_512.png} @iid.ulaval
+			
+			\includegraphics[height=.05\textheight]{img/LI-In-Bug.png} iid-ulaval
+			
+			\includegraphics[height=.05\textheight]{img/Twitter_Logo_Blue.png} @IID\_ULaval
+			
+			\includegraphics[height=.05\textheight]{img/glyph-logo_May2016.png} iid\_ulaval
 		\end{column}%
 	\end{columns}%
 }
