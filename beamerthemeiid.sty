@@ -45,14 +45,14 @@
     allsmallcaps/.code={%
       \let\metropolis@plaintitleformat\MakeLowercase%
       \setbeamerfont{standout}{shape=\scshape}%
-      \PackageWarning{beamerthememetropolis}{%
+      \PackageWarning{beamerthemeiid}{%
         Be aware that titleformat plain=allsmallcaps can lead to problems%
       }
     },
     allcaps/.code={%
       \let\metropolis@plaintitleformat\MakeUppercase%
       \setbeamerfont{standout}{shape=\normalfont}%
-      \PackageWarning{beamerthememetropolis}{%
+      \PackageWarning{beamerthemeiid}{%
         Be aware that titleformat plain=allcaps can lead to problems%
       }
     },
@@ -84,7 +84,7 @@
 \useinnertheme{iid}
 \useoutertheme{iid}
 \usecolortheme{iid}
-\usefonttheme{metropolis}
+\usefonttheme{iid}
 \AtEndPreamble{%
   \@ifpackageloaded{pgfplots}{%
     \RequirePackage{pgfplotsthemetol}
@@ -93,7 +93,7 @@
 \newcommand{\metroset}[1]{\pgfkeys{/metropolis/.cd,#1}}
 \def\metropolis@plaintitleformat#1{#1}
 \newcommand{\plain}[2][]{%
-  \PackageWarning{beamerthememetropolis}{%
+  \PackageWarning{beamerthemeiid}{%
     The syntax `\plain' may be deprecated in a future version of Metropolis.
     Please use a frame with [standout] instead.
   }

@@ -20,6 +20,7 @@
 \RequirePackage{ifxetex}
 \RequirePackage{ifluatex}
 \RequirePackage{pgfopts}
+\RequirePackage{fontspec}
 \ifboolexpr{bool {xetex} or bool {luatex}}{
   \@ifpackageloaded{fontspec}{
     \PassOptionsToPackage{no-math}{fontspec}
@@ -36,7 +37,6 @@
     \fi%
     \suppressfontnotfounderror=0%
   }
-
   \newcommand{\iffontsavailable}[3]{%
     \setcounter{fontsnotfound}{0}%
     \expandafter\forcsvlist\expandafter%
@@ -47,38 +47,18 @@
       #3%
     \fi%
   }
-  \iffontsavailable{Fira Sans Light,%
-                    Fira Sans Light Italic,%
-                    Fira Sans,%
-                    Fira Sans Italic}%
-  {%
-    \setsansfont[ItalicFont={Fira Sans Light Italic},%
-                 BoldFont={Fira Sans},%
-                 BoldItalicFont={Fira Sans Italic}]%
-                {Fira Sans Light}%
-  }{%
-    \iffontsavailable{Fira Sans Light OT,%
-                      Fira Sans Light Italic OT,%
-                      Fira Sans OT,%
-                      Fira Sans Italic OT}%
-    {%
-      \setsansfont[ItalicFont={Fira Sans Light Italic OT},%
-                   BoldFont={Fira Sans OT},%
-                   BoldItalicFont={Fira Sans Italic OT}]%
-                  {Fira Sans Light OT}%
-    }{%
-      \PackageWarning{beamerthememetropolis}{%
-        Could not find Fira Sans fonts%
-      }
-    }
-  }
+ \setsansfont[Path=font/,
+              ItalicFont={Overpass-LightItalic},%
+			  BoldFont={Overpass-Bold},%
+              BoldItalicFont={Overpass-BoldItalic}]%
+		  	  {Overpass-Light}%	
   \iffontsavailable{Fira Mono, Fira Mono Bold}{%
     \setmonofont[BoldFont={Fira Mono Medium}]{Fira Mono}%
   }{%
     \iffontsavailable{Fira Mono OT, Fira Mono Bold OT}{%
       \setmonofont[BoldFont={Fira Mono Medium OT}]{Fira Mono OT}%
     }{%
-      \PackageWarning{beamerthememetropolis}{%
+      \PackageWarning{beamerthemeiid}{%
         Could not find Fira Mono fonts%
       }
     }
@@ -87,12 +67,12 @@
     \addfontfeature{Numbers={Monospaced}}%
   }
 }{%
-  \PackageWarning{beamerthememetropolis}{%
+  \PackageWarning{beamerthemeiid}{%
     You need to compile with XeLaTeX or LuaLaTeX to use the Fira fonts%
   }
 }
 \setbeamerfont{title}{size=\LARGE,%
-					  series=\bfseries}
+                      series=\bfseries}
 \setbeamerfont{author}{size=\small}
 \setbeamerfont{date}{size=\small}
 \setbeamerfont{section title}{size=\Large,%
@@ -132,14 +112,14 @@
     allsmallcaps/.code={%
       \let\metropolis@titleformat\lowercase%
       \setbeamerfont{title}{shape=\scshape}%
-      \PackageWarning{beamerthememetropolis}{%
+      \PackageWarning{beamerthemeiid}{%
         Be aware that titleformat title=allsmallcaps can lead to problems%
       }
     },
     allcaps/.code={%
       \let\metropolis@titleformat\uppercase%
       \setbeamerfont{title}{shape=\normalfont}
-      \PackageWarning{beamerthememetropolis}{%
+      \PackageWarning{beamerthemeiid}{%
         Be aware that titleformat title=allcaps can lead to problems%
       }
     },
@@ -158,14 +138,14 @@
     allsmallcaps/.code={%
       \let\metropolis@subtitleformat\lowercase%
       \setbeamerfont{subtitle}{shape=\scshape}%
-      \PackageWarning{beamerthememetropolis}{%
+      \PackageWarning{beamerthemeiid}{%
         Be aware that titleformat subtitle=allsmallcaps can lead to problems%
       }
     },
     allcaps/.code={%
       \let\metropolis@subtitleformat\uppercase%
       \setbeamerfont{subtitle}{shape=\normalfont}%
-      \PackageWarning{beamerthememetropolis}{%
+      \PackageWarning{beamerthemeiid}{%
         Be aware that titleformat subtitle=allcaps can lead to problems%
       }
     },
@@ -184,14 +164,14 @@
     allsmallcaps/.code={%
       \let\metropolis@sectiontitleformat\MakeLowercase%
       \setbeamerfont{section title}{shape=\scshape}%
-      \PackageWarning{beamerthememetropolis}{%
+      \PackageWarning{beamerthemeiid}{%
         Be aware that titleformat section=allsmallcaps can lead to problems%
       }
     },
     allcaps/.code={%
       \let\metropolis@sectiontitleformat\MakeUppercase%
       \setbeamerfont{section title}{shape=\normalfont}%
-      \PackageWarning{beamerthememetropolis}{%
+      \PackageWarning{beamerthemeiid}{%
         Be aware that titleformat section=allcaps can lead to problems%
       }
     },
@@ -210,14 +190,14 @@
     allsmallcaps/.code={%
       \let\metropolis@frametitleformat\MakeLowercase%
       \setbeamerfont{frametitle}{shape=\scshape}%
-      \PackageWarning{beamerthememetropolis}{%
+      \PackageWarning{beamerthemeiid}{%
         Be aware that titleformat frame=allsmallcaps can lead to problems%
       }
     },
     allcaps/.code={%
       \let\metropolis@frametitleformat\MakeUppercase%
       \setbeamerfont{frametitle}{shape=\normalfont}
-      \PackageWarning{beamerthememetropolis}{%
+      \PackageWarning{beamerthemeiid}{%
         Be aware that titleformat frame=allcaps can lead to problems%
       }
     },
@@ -245,17 +225,17 @@
   {\def\inserttitle{#2}}%
   {\def\inserttitle{\metropolis@titleformat{#2}}}%
   {}%
-  {\PackageError{beamerfontthememetropolis}{Patching title failed}\@ehc}
+  {\PackageError{beamerfontthemeiid}{Patching title failed}\@ehc}
 \patchcmd{\beamer@subtitle}%
   {\def\insertsubtitle{#2}}%
   {\def\insertsubtitle{\metropolis@subtitleformat{#2}}}%
   {}%
-  {\PackageError{beamerfontthememetropolis}{Patching subtitle failed}\@ehc}
+  {\PackageError{beamerfontthemeiid}{Patching subtitle failed}\@ehc}
 \patchcmd{\sectionentry}
   {\def\insertsectionhead{#2}}
   {\def\insertsectionhead{\metropolis@sectiontitleformat{#2}}}
   {}
-  {\PackageError{beamerfontthememetropolis}{Patching section title failed}\@ehc}
+  {\PackageError{beamerfontthemeiid}{Patching section title failed}\@ehc}
 \@tempswafalse
 \patchcmd{\beamer@section}
   {\edef\insertsectionhead{\noexpand\hyperlink{Navigation\the\c@page}{\unexpanded{#1}}}}
@@ -276,7 +256,7 @@
   {\@tempswatrue}
   {}
 \if@tempswa\else
-  \PackageError{beamerfontthememetropolis}{Patching section title failed}\@ehc
+  \PackageError{beamerfontthemeiid}{Patching section title failed}\@ehc
 \fi
 \@tempswafalse
 \patchcmd{\beamer@subsection}
@@ -298,7 +278,7 @@
   {\@tempswatrue}
   {}
 \if@tempswa\else
-  \PackageError{beamerfontthememetropolis}{Patching section title failed}\@ehc
+  \PackageError{beamerfontthemeiid}{Patching section title failed}\@ehc
 \fi
 \patchcmd{\beamer@@frametitle}
   {{%
@@ -315,9 +295,9 @@
     \gdef\beamer@shortframetitle{#1}%
     }}
   {}
-  {\PackageError{beamerfontthememetropolis}{Patching frame title failed}\@ehc}
+  {\PackageError{beamerfontthemeiid}{Patching frame title failed}\@ehc}
 \metropolis@font@setdefaults
 \ProcessPgfPackageOptions{/metropolis/font}
 \endinput
 %%
-%% End of file `beamerfontthememetropolis.sty'.
+%% End of file `beamerfontthemeiid.sty'.

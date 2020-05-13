@@ -1,6 +1,7 @@
 \documentclass[aspectratio=169]{beamer}
 \usetheme{iid}
 
+
 \title{Exemple de présentation avec le thème Beamer IID}
 \subtitle{Exemple de sous titre}
 \author{Équipe IID}
@@ -13,6 +14,10 @@
 \addtobeamertemplate{title page}{\thispagestyle{navigation@titlepage}}{}
 \makeatother
 
+\makeatletter
+\edef\textFontName{\fontname\font}
+\makeatother
+
 \begin{document}
 \begin{frame}[plain]
     \maketitle
@@ -22,6 +27,15 @@
 \subsection{Sous section 1.1}
 \begin{frame}{Titre d'une page}
 Contenu de la première page
+\begin{itemize}
+	\item Texte normal 
+	\item \textit{Texte Italique}
+	\item \textbf{Texte Gras}
+	\item \textbf{\textit{Texte Gras Italique}}
+	\item \underline{Texte souligné}
+	\item \underline{\textbf{\textit{Texte souligné Gras Italique}}}
+	\item Police utilisée (normale) :  \textFontName
+\end{itemize}
 \end{frame}
 \subsection{Sous section 1.2}
 \begin{frame}{Titre d'une autre page}
