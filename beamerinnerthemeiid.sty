@@ -22,6 +22,7 @@
 \RequirePackage{pgfopts}
 \RequirePackage{tikz}
 \RequirePackage{hyperref}
+\RequirePackage{tabularx}
 \pgfkeys{
   /metropolis/inner/sectionpage/.cd,
     .is choice,
@@ -299,6 +300,63 @@
 	\end{columns}%
 }
 
+\setbeamertemplate{one page presentation iid}{%
+	\iidbackgroundnoUL
+	\begin{columns}
+		\begin{column}[T]{0.20\textwidth}%
+			\includegraphics[width=0.9\textwidth]{img/iid-noir.pdf}%
+			
+			\vspace{1em}
+			
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+			
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+			
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+			
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+			
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+			
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+			
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+		\end{column}%
+		\begin{column}[T]{0.35\textwidth}%
+			\color{iidOrange}{\large \textbf{Domaines d'intervention}}
+			\color{black}
+			\footnotesize
+			\vspace{1em}
+			\renewcommand{\arraystretch}{2.0}
+			\begin{tabularx}{\textwidth}{cX}
+				\raisebox{-.5\height}{\includegraphics[width=0.15\textwidth]{img/020-vision.eps}} & Environnement physique \\
+				\raisebox{-.5\height}{\includegraphics[width=0.15\textwidth]{img/027-heart.eps}} & Santé et étude du vivant \\
+				\raisebox{-.5\height}{\includegraphics[width=0.15\textwidth]{img/013-brain.eps}} & 	Méthodes d’IA et de traitement de données \\
+				\raisebox{-.5\height}{\includegraphics[width=0.15\textwidth]{img/028-cpu.eps}} & Éthique, confidentialité et acceptabilité sociale
+			\end{tabularx}
+		\end{column}%
+		\begin{column}[T]{0.5\textwidth}
+			\color{iidOrange} \large \textbf{Collaboration avec les entreprises et les organisations}	
+			\color{black} 			
+			\footnotesize
+			\vspace{1em}
+			\begin{itemize}
+				\item Collaborations ou partenariats sur mesure;
+				\item Offre de stages en entreprises;
+				\item Programmes d’accompagnement;
+				\item Animation du site d’innovation ENCQOR 5G de Québec;		
+			\end{itemize}
+		\end{column}
+	\end{columns}
+}
+
 \def\maketitle{%
   \ifbeamer@inframe
     \titlepage
@@ -362,6 +420,17 @@
 		\collaborationsiid
 	\else
 	\frame[plain,noframenumbering]{\collaborationsiid}
+	\fi
+}
+
+\def\onepagepresentationiid{%
+	\usebeamertemplate{one page presentation iid}
+}
+\def\makeonepagepresentationiid{%
+	\ifbeamer@inframe
+		\onepagepresentationiid
+	\else
+	\frame[plain,noframenumbering]{\onepagepresentationiid}
 	\fi
 }
 
