@@ -69,8 +69,8 @@
 }
 
 \newcommand{\contactemail}{equipe@iid.ulaval.ca}
-% Page de remerciement
-\setbeamertemplate{thanks page}{%
+% Page de remerciement une colonne
+\setbeamertemplate{thanks page one col}{%
 	\iidbackground
 	\begin{columns}
 		\begin{column}{0.45\textwidth}%
@@ -82,17 +82,219 @@
 			\textbf{POUR PLUS D’INFORMATIONS}%
 			
 			\vspace{1em}
+
 			\contactemail
 			
 			\url{https://iid.ulaval.ca/}
-			
+			\vspace{1em}
+						
 			\includegraphics[height=.05\textheight]{img/f_logo_RGB-Hex-Blue_512.png} @iid.ulaval
-			
-			\includegraphics[height=.05\textheight]{img/LI-In-Bug.png} iid-ulaval
 			
 			\includegraphics[height=.05\textheight]{img/Twitter_Logo_Blue.png} @IID\_ULaval
 			
+			\includegraphics[height=.05\textheight]{img/LI-In-Bug.png} iid-ulaval
+						
 			\includegraphics[height=.05\textheight]{img/glyph-logo_May2016.png} iid\_ulaval
+			
+			\includegraphics[height=.05\textheight]{img/yt_icon_rgb.eps} bit.ly/youtube-iid
+		\end{column}%
+	\end{columns}%
+}
+
+% Page de remerciement deux colonnes
+\setbeamertemplate{thanks page two cols}{%
+	\iidbackground
+	\color{iidBleuNuit}
+	\begin{columns}
+		\begin{column}{0.45\textwidth}%
+			\vskip -5em% JL - Why do i need vskip. \begin{columns}[T] not working ?
+			\includegraphics[height=.25\textheight]{img/iid-bleu.pdf}%
+			
+			\vspace{1em}%
+			\textbf{POUR PLUS D’INFORMATIONS}%
+			
+			\vspace{1em}
+			
+			\contactemail
+			
+			\url{https://iid.ulaval.ca/}
+		\end{column}%
+		\begin{column}{0.54\textwidth}%
+			\vskip 5em%
+			
+			\textbf{SUIVEZ-NOUS SUR LES MEDIAS SOCIAUX}%
+			\vspace{1em}%
+			
+			\includegraphics[height=.05\textheight]{img/f_logo_RGB-Hex-Blue_512.png} @iid.ulaval
+			
+			\includegraphics[height=.05\textheight]{img/Twitter_Logo_Blue.png} @IID\_ULaval
+			
+			\includegraphics[height=.05\textheight]{img/LI-In-Bug.png} iid-ulaval
+			
+			\includegraphics[height=.05\textheight]{img/glyph-logo_May2016.png} iid\_ulaval
+			
+			\includegraphics[height=.05\textheight]{img/yt_icon_rgb.eps} bit.ly/youtube-iid
+		\end{column}%
+	\end{columns}%
+}
+
+\setbeamertemplate{presentation iid}{%
+	\iidbackgroundnoUL
+	\color{iidBleuNuit}
+	\begin{columns}
+		\begin{column}[T]{0.5\textwidth}%
+			\vskip -2em
+			\centering\includegraphics[height=.25\textheight]{img/iid-bleu.pdf}%
+			
+			\vspace{1em}
+			
+			\includegraphics[width=0.20\textwidth]{img/vague-filet-bleu@2x.png}
+			\includegraphics[width=0.20\textwidth]{img/vague-filet-bleu@2x.png}
+			\includegraphics[width=0.20\textwidth]{img/vague-filet-bleu@2x.png}
+			\includegraphics[width=0.20\textwidth]{img/vague-filet-bleu@2x.png}
+			
+			\includegraphics[width=0.20\textwidth]{img/vague-filet-bleu@2x.png}
+			\includegraphics[width=0.20\textwidth]{img/vague-filet-bleu@2x.png}
+			\includegraphics[width=0.20\textwidth]{img/vague-filet-bleu@2x.png}
+			\includegraphics[width=0.20\textwidth]{img/vague-filet-bleu@2x.png}
+			
+			\includegraphics[width=0.20\textwidth]{img/vague-filet-bleu@2x.png}
+			\includegraphics[width=0.20\textwidth]{img/vague-filet-bleu@2x.png}
+			\includegraphics[width=0.20\textwidth]{img/vague-filet-bleu@2x.png}
+			\includegraphics[width=0.20\textwidth]{img/vague-filet-bleu@2x.png}
+			
+			\includegraphics[width=0.20\textwidth]{img/vague-filet-bleu@2x.png}
+			\includegraphics[width=0.20\textwidth]{img/vague-filet-bleu@2x.png}
+			\includegraphics[width=0.20\textwidth]{img/vague-filet-bleu@2x.png}
+			\includegraphics[width=0.20\textwidth]{img/vague-filet-bleu@2x.png}
+			
+			\includegraphics[width=0.20\textwidth]{img/vague-filet-bleu@2x.png}
+			\includegraphics[width=0.20\textwidth]{img/vague-filet-bleu@2x.png}
+			\includegraphics[width=0.20\textwidth]{img/vague-filet-bleu@2x.png}
+			\includegraphics[width=0.20\textwidth]{img/vague-filet-bleu@2x.png}
+			
+		\end{column}%
+		\begin{column}[T]{0.5\textwidth}%
+			\vskip -2em
+			\noindent\rule{\textwidth}{1pt}
+			
+			\textbf{Pôle d’excellence mondiale en intelligence artificielle et en valorisation des données,} l’Institut intelligence et données (IID) fédère, par le biais d’une approche multidisciplinaire et dans un esprit de collaboration, les expertise et l’innovation dans ces domaines pour l’Université Laval et dans la grande région de Québec. 
+			\vspace{0.5em}
+						
+			Informations : \textbf{iid.ulaval.ca}
+		\end{column}%
+	\end{columns}%
+}
+
+\setbeamertemplate{domaines iid}{%
+	\iidbackgroundnoUL
+	\color{iidBleuNuit}
+	\normalsize
+	\vskip -1.5em
+    \huge Les domaines d'interventions de l'IID
+   	\vspace{1.5em}
+   	\normalsize
+	\begin{columns}
+		\begin{column}[T]{0.1\textwidth}%
+			\vskip -2em
+			\includegraphics[width=0.9\textwidth]{img/020-vision.eps}
+
+			\vspace{1em}
+			
+			\includegraphics[width=0.9\textwidth]{img/027-heart.eps}
+			
+			\vspace{1em}
+			
+			\includegraphics[width=0.9\textwidth]{img/013-brain.eps}
+			
+			\vspace{1em}
+			
+			\includegraphics[width=0.9\textwidth]{img/028-cpu.eps}
+		\end{column}%
+		\begin{column}[T]{0.2\textwidth}%
+			\vskip -2em
+			\small
+			\vspace{0.5em}
+			\textbf{Environnement physique}
+			
+			\vspace{1.5em}
+						
+			\textbf{Santé et étude du vivant}
+			
+			\vspace{1.8em}
+						
+			\textbf{Méthodes d’IA et de traitement de données}
+			
+			\vspace{1.2em}
+						
+			\textbf{Éthique, confidentialité et acceptabilité sociale}
+		\end{column}%
+		\begin{column}[T]{0.7\textwidth}%
+			\vskip -1.8em
+			\footnotesize
+			Explorer les usages et les interactions entre environnement physique et données, à l’échelle d’un individu, d’un bâtiment, d’une ville ou d’un territoire.
+			 
+			\vspace{0.8em}
+			
+			Analyser les données provenant du vivant, de la molécule aux populations humaines ou animales, et soutenir leur usage au profit de la compréhension de notre monde. 
+			
+			\vspace{1em}
+			
+			Promouvoir et développer la recherche fondamentale et appliquée, rattachée tant à des méthodes génériques qu’à des approches spécifiques ou des systèmes complexes. 
+			
+			\vspace{1.2em}
+			
+			Intégrer une dimension éthique aux développements et à la recherche en intelligence artificielle, en réponse aux réalités liés à la sécurité, la confidentialité et l’acceptabilité sociale.  
+		\end{column}%
+	\end{columns}%
+}
+
+\setbeamertemplate{collaborations iid}{%
+	\begin{columns}
+		\begin{column}[T]{0.2\textwidth}%
+			
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+						
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+				
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+				
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+				
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+				
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+				
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+				
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+				
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+				
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+			\includegraphics[width=0.48\textwidth]{img/vague-filet-orange@2x.png}
+			
+		\end{column}%
+		\begin{column}[T]{0.8\textwidth}%
+			\color{iidOrange} \LARGE \textbf{Collaboration avec les entreprises et les organisations}	
+			\color{black} 			
+			\normalsize
+			\vspace{1em}
+			\begin{itemize}
+				\item \textbf{Collaborations ou partenariats sur mesure};
+				\item \textbf{Offre de stages en entreprises}, notamment dans le cadre du programme de maîtrise professionnelle en informatique – IA;
+				\item \textbf{Programmes d’accompagnement} afin de soutenir la transition vers l’usage de l’intelligence artificielle et des données en entreprise;
+				\item Animation du \textbf{site d’innovation ENCQOR 5G de Québec} et offres de financement associée;		
+			\end{itemize}
 		\end{column}%
 	\end{columns}%
 }
@@ -116,7 +318,51 @@
 	\fi
 }
 \def\thankspage{%
-  \usebeamertemplate{thanks page}
+  \usebeamertemplate{thanks page one col}
+}
+
+\def\makethankstwo{%
+	\ifbeamer@inframe
+		\thankspagetwo
+	\else
+		\frame[plain,noframenumbering]{\thankspagetwo}
+	\fi
+}
+\def\thankspagetwo{%
+	\usebeamertemplate{thanks page two cols}
+}
+
+\def\makepresentationiid{%
+	\ifbeamer@inframe
+		\presentationiid	
+	\else
+		\frame[plain,noframenumbering]{\presentationiid}
+	\fi
+}
+\def\presentationiid{%
+	\usebeamertemplate{presentation iid}
+}
+
+\def\domainesiid{%
+	\usebeamertemplate{domaines iid}
+}
+\def\makedomainesiid{%
+	\ifbeamer@inframe
+		\domainesiid
+	\else
+		\frame[plain,noframenumbering]{\domainesiid}
+	\fi
+}
+
+\def\collaborationsiid{%
+	\usebeamertemplate{collaborations iid}
+}
+\def\makecollaborationsiid{%
+	\ifbeamer@inframe
+		\collaborationsiid
+	\else
+	\frame[plain,noframenumbering]{\collaborationsiid}
+	\fi
 }
 
 \setbeamertemplate{title iid logo}{

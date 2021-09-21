@@ -65,6 +65,15 @@
 	\end{tikzpicture}%
 }
 
+% Image de fond pas ulaval
+\newcommand{\iidbackgroundnoUL}{%
+	\begin{tikzpicture}[remember picture,overlay]%
+	\node [xshift=0cm,yshift=0cm] at (current page.center)%
+	{\includegraphics[width=\paperwidth,height=\paperheight]{img/IID-PPT-vague}};%
+	\end{tikzpicture}%
+}
+
+
 \setbeamertemplate{navigation symbols}{}
 \defbeamertemplate{frame footer}{none}{}
 \defbeamertemplate{frame footer}{custom}[1]{ #1 }
