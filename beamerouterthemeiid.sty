@@ -19,6 +19,7 @@
 \RequirePackage{etoolbox}
 \RequirePackage{calc}
 \RequirePackage{pgfopts}
+\RequirePackage{fontawesome5}
 \pgfkeys{
   /metropolis/outer/numbering/.cd,
     .is choice,
@@ -89,9 +90,12 @@
 %	\vskip3pt%
 %  \end{beamercolorbox}%
 %}
+\def\thelicence{}
+\newcommand\licence[1]{\def\thelicence{#1}}
 \setbeamertemplate{footline}{%
 	\hspace{30pt}
-	\usebeamertemplate*{frame numbering}
+	\usebeamertemplate*{frame numbering} 
+	\ifx\thelicence\@empty\else- Cette présentation est distribuée sous licence \thelicence\fi
 	\hfill%
 	\vspace{20pt}\includegraphics[height=0.5cm]{img/UL_P-BW}\hspace{20pt}
 }
